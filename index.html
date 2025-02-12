@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Detaylı HTML Etiketleri Kullanım Örneği</title>
+    <style>
+        /* Genel stil ayarları */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header,
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+        }
+
+        .demo-code {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .demo,
+        .code {
+            flex: 1 1 45%;
+            border: 1px solid #ddd;
+            padding: 10px;
+            background: #fff;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .code pre {
+            margin: 0;
+            overflow-x: auto;
+            background: #f4f4f4;
+            padding: 10px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        @media(max-width: 800px) {
+
+            .demo,
+            .code {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Detaylı HTML Etiketleri Kullanım Örneği</h1>
+    </header>
+    <main>
+        <!-- 1. Presentation Formatting (Biçimlendirme) -->
+        <section id="presentation-formatting">
+            <h2>Presentation Formatting (Biçimlendirme)</h2>
+            <p>Aşağıda metin biçimlendirme etiketlerinin kullanımı ve bunun kod karşılığı yer almaktadır.</p>
+            <div class="demo-code">
+                <!-- Demo Alanı -->
+                <div class="demo">
+                    <p>
+                        <b>Kalın metin</b> (b etiketi),
+                        <strong>önemli kalın metin</strong> (strong etiketi),
+                        <i>Eğik metin</i> (i etiketi),
+                        <em>vurgu metin</em> (em etiketi),
+                        <u>altı çizili metin</u> (u etiketi),
+                        <mark>işaretlenmiş metin</mark> (mark etiketi).
+                    </p>
+                    <p>
+                        Kimyasal formül: H<sub>2</sub>O (<code>&lt;sub&gt;</code> etiketi) ve
+                        matematiksel ifade: x<sup>2</sup> (<code>&lt;sup&gt;</code> etiketi).
+                    </p>
+                    <p>
+                        Kısaltma: <abbr title="HyperText Markup Language">HTML</abbr> (<code>&lt;abbr&gt;</code>
+                        etiketi).
+                    </p>
+                    <p>
+                        Kod örneği: <code>console.log('Merhaba');</code> (<code>&lt;code&gt;</code> etiketi) ve
+                        klavye kısayolu: <kbd>Ctrl + C</kbd> (<code>&lt;kbd&gt;</code> etiketi).
+                    </p>
+                </div>
+                <!-- Kod Alanı -->
+                <div class="code">
+                    <pre><code>&lt;p&gt;
+  &lt;b&gt;Kalın metin&lt;/b&gt; (b etiketi), 
+  &lt;strong&gt;önemli kalın metin&lt;/strong&gt; (strong etiketi), 
+  &lt;i&gt;Eğik metin&lt;/i&gt; (i etiketi), 
+  &lt;em&gt;vurgu metin&lt;/em&gt; (em etiketi), 
+  &lt;u&gt;altı çizili metin&lt;/u&gt; (u etiketi), 
+  &lt;mark&gt;işaretlenmiş metin&lt;/mark&gt; (mark etiketi).
+&lt;/p&gt;
+
+&lt;p&gt;
+  Kimyasal formül: H&lt;sub&gt;2&lt;/sub&gt;O (sub etiketi) ve
+  matematiksel ifade: x&lt;sup&gt;2&lt;/sup&gt; (sup etiketi).
+&lt;/p&gt;
+
+&lt;p&gt;
+  Kısaltma: &lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt; (abbr etiketi).
+&lt;/p&gt;
+
+&lt;p&gt;
+  Kod örneği: &lt;code&gt;console.log('Merhaba');&lt;/code&gt; (code etiketi) ve 
+  klavye kısayolu: &lt;kbd&gt;Ctrl + C&lt;/kbd&gt; (kbd etiketi).
+&lt;/p&gt;
+</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Links and Graphics (Bağlantılar ve Grafikler) -->
+        <section id="links-graphics">
+            <h2>Links and Graphics (Bağlantılar ve Grafikler)</h2>
+            <p>Aşağıda bağlantı (<code>&lt;a&gt;</code>) ve resim (<code>&lt;img&gt;</code>) etiketlerinin kullanımı
+                gösterilmiştir.</p>
+            <div class="demo-code">
+                <div class="demo">
+                    <p>
+                        Bu, <a href="https://www.example.com" target="_blank">Example.com</a> sitesine giden bir
+                        bağlantıdır.
+                    </p>
+                    <figure>
+                        <img src="https://picsum.photos/150/150" alt="Örnek Resim" width="150">
+                        <figcaption>Bu resim Picsum servisi ile sağlanmıştır.</figcaption>
+                    </figure>
+                </div>
+                <div class="code">
+                    <pre><code>&lt;p&gt;
+  Bu, &lt;a href="https://www.example.com" target="_blank"&gt;Example.com&lt;/a&gt; sitesine giden bir bağlantıdır.
+&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src="https://picsum.photos/150/150" alt="Örnek Resim" width="150"&gt;
+  &lt;figcaption&gt;Bu resim Picsum servisi ile sağlanmıştır.&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Separators (Ayırıcılar) -->
+        <section id="separators">
+            <h2>Separators (Ayırıcılar)</h2>
+            <p>Aşağıda <code>&lt;br&gt;</code> ve <code>&lt;hr&gt;</code> etiketlerinin kullanımı gösterilmiştir.</p>
+            <div class="demo-code">
+                <div class="demo">
+                    <p>Bu bir satır.<br>Bu yeni satır.</p>
+                    <hr>
+                    <p>Yatay çizginin altındaki metin.</p>
+                </div>
+                <div class="code">
+                    <pre><code>&lt;p&gt;Bu bir satır.&lt;br&gt;Bu yeni satır.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Yatay çizginin altındaki metin.&lt;/p&gt;
+</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Lists (Listeler) -->
+        <section id="lists">
+            <h2>Lists (Listeler)</h2>
+            <p>Aşağıda sırasız, sıralı ve tanım listelerinin kullanımı gösterilmiştir.</p>
+            <div class="demo-code">
+                <div class="demo">
+                    <h3>Sırasız Liste</h3>
+                    <ul>
+                        <li>Birinci öğe</li>
+                        <li>İkinci öğe</li>
+                        <li>Üçüncü öğe</li>
+                    </ul>
+                    <h3>Sıralı Liste</h3>
+                    <ol>
+                        <li>Birinci öğe</li>
+                        <li>İkinci öğe</li>
+                        <li>Üçüncü öğe</li>
+                    </ol>
+                    <h3>Tanım Listesi</h3>
+                    <dl>
+                        <dt>HTML</dt>
+                        <dd>HyperText Markup Language</dd>
+                        <dt>CSS</dt>
+                        <dd>Cascading Style Sheets</dd>
+                    </dl>
+                </div>
+                <div class="code">
+                    <pre><code>&lt;h3&gt;Sırasız Liste&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Birinci öğe&lt;/li&gt;
+  &lt;li&gt;İkinci öğe&lt;/li&gt;
+  &lt;li&gt;Üçüncü öğe&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Sıralı Liste&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;Birinci öğe&lt;/li&gt;
+  &lt;li&gt;İkinci öğe&lt;/li&gt;
+  &lt;li&gt;Üçüncü öğe&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3&gt;Tanım Listesi&lt;/h3&gt;
+&lt;dl&gt;
+  &lt;dt&gt;HTML&lt;/dt&gt;
+  &lt;dd&gt;HyperText Markup Language&lt;/dd&gt;
+  &lt;dt&gt;CSS&lt;/dt&gt;
+  &lt;dd&gt;Cascading Style Sheets&lt;/dd&gt;
+&lt;/dl&gt;
+</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Background and Colors (Arka Plan ve Renkler) -->
+        <section id="background-colors">
+            <h2>Background and Colors (Arka Plan ve Renkler)</h2>
+            <p>Aşağıda inline CSS kullanılarak metin ve arka plan renklerinin nasıl ayarlandığı gösterilmiştir.</p>
+            <div class="demo-code">
+                <div class="demo">
+                    <p style="color: #006064;">Bu metin, belirli bir renk ile stilize edilmiştir.</p>
+                    <p style="background-color: #b2ebf2;">Bu paragrafın arka plan rengi farklıdır.</p>
+                </div>
+                <div class="code">
+                    <pre><code>&lt;p style="color: #006064;"&gt;Bu metin, belirli bir renk ile stilize edilmiştir.&lt;/p&gt;
+&lt;p style="background-color: #b2ebf2;"&gt;Bu paragrafın arka plan rengi farklıdır.&lt;/p&gt;
+</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Forms (Formlar) -->
+        <section id="forms">
+            <h2>Forms (Formlar)</h2>
+            <p>Aşağıda çeşitli form elemanlarının (input, textarea, fieldset, vs.) kullanımı gösterilmiştir.</p>
+            <div class="demo-code">
+                <div class="demo">
+                    <form action="#" method="post">
+                        <fieldset>
+                            <legend>İletişim Formu</legend>
+                            <label for="name">İsim:</label><br>
+                            <input type="text" id="name" name="name" placeholder="Adınız"><br><br>
+
+                            <label for="email">E-posta:</label><br>
+                            <input type="email" id="email" name="email" placeholder="Email adresiniz"><br><br>
+
+                            <label for="message">Mesaj:</label><br>
+                            <textarea id="message" name="message" rows="4" cols="40"
+                                placeholder="Mesajınızı yazın"></textarea><br><br>
+
+                            <input type="submit" value="Gönder">
+                            <input type="reset" value="Sıfırla">
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="code">
+                    <pre><code>&lt;form action="#" method="post"&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;İletişim Formu&lt;/legend&gt;
+    
+    &lt;label for="name"&gt;İsim:&lt;/label&gt;&lt;br&gt;
+    &lt;input type="text" id="name" name="name" placeholder="Adınız"&gt;&lt;br&gt;&lt;br&gt;
+    
+    &lt;label for="email"&gt;E-posta:&lt;/label&gt;&lt;br&gt;
+    &lt;input type="email" id="email" name="email" placeholder="Email adresiniz"&gt;&lt;br&gt;&lt;br&gt;
+    
+    &lt;label for="message"&gt;Mesaj:&lt;/label&gt;&lt;br&gt;
+    &lt;textarea id="message" name="message" rows="4" cols="40" placeholder="Mesajınızı yazın"&gt;&lt;/textarea&gt;&lt;br&gt;&lt;br&gt;
+    
+    &lt;input type="submit" value="Gönder"&gt;
+    &lt;input type="reset" value="Sıfırla"&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;
+</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Tables (Tablolar) -->
+        <section id="tables">
+            <h2>Tables (Tablolar)</h2>
+            <p>Aşağıda tablo etiketlerinin (<code>&lt;table&gt;</code>, <code>&lt;thead&gt;</code>,
+                <code>&lt;tbody&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code>, <code>&lt;td&gt;</code>,
+                <code>&lt;caption&gt;</code>) kullanımı gösterilmiştir.</p>
+            <div class="demo-code">
+                <div class="demo">
+                    <table>
+                        <caption>Örnek Tablo</caption>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>İsim</th>
+                                <th>Yaş</th>
+                                <th>Şehir</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Ayşe</td>
+                                <td>28</td>
+                                <td>İstanbul</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Mehmet</td>
+                                <td>35</td>
+                                <td>Ankara</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="code">
+                    <pre><code>&lt;table&gt;
+  &lt;caption&gt;Örnek Tablo&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;#&lt;/th&gt;
+      &lt;th&gt;İsim&lt;/th&gt;
+      &lt;th&gt;Yaş&lt;/th&gt;
+      &lt;th&gt;Şehir&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;Ayşe&lt;/td&gt;
+      &lt;td&gt;28&lt;/td&gt;
+      &lt;td&gt;İstanbul&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Mehmet&lt;/td&gt;
+      &lt;td&gt;35&lt;/td&gt;
+      &lt;td&gt;Ankara&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7.1 Detaylı Tablo: Colspan ve Rowspan Kullanımı -->
+        <section id="detailed-tables-colspan-rowspan">
+            <h2>Detaylı Tablo: Colspan ve Rowspan Kullanımı</h2>
+            <p>Bu örnekte, <code>colspan</code> (bir hücrenin birden fazla kolonu kapsaması) ve <code>rowspan</code>
+                (bir hücrenin birden fazla satırı kapsaması) özellikleri kullanılarak tablo hücrelerinin birleştirilmesi
+                gösterilmiştir.</p>
+            <div class="demo-code">
+                <div class="demo">
+                    <table>
+                        <caption>Colspan ve Rowspan Örneği</caption>
+                        <thead>
+                            <tr>
+                                <th>Başlık 1</th>
+                                <th>Başlık 2</th>
+                                <th>Başlık 3</th>
+                                <th>Başlık 4</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="2">Satır 1-2, Kolon 1</td>
+                                <td>Satır 1, Kolon 2</td>
+                                <td colspan="2">Satır 1, Kolon 3 ve 4 birleşti</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">Satır 2, Kolon 2 ve 3 birleşti</td>
+                                <td>Satır 2, Kolon 4</td>
+                            </tr>
+                            <tr>
+                                <td>Satır 3, Kolon 1</td>
+                                <td>Satır 3, Kolon 2</td>
+                                <td>Satır 3, Kolon 3</td>
+                                <td>Satır 3, Kolon 4</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="code">
+                    <pre><code>&lt;table&gt;
+  &lt;caption&gt;Colspan ve Rowspan Örneği&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Başlık 1&lt;/th&gt;
+      &lt;th&gt;Başlık 2&lt;/th&gt;
+      &lt;th&gt;Başlık 3&lt;/th&gt;
+      &lt;th&gt;Başlık 4&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td rowspan="2"&gt;Satır 1-2, Kolon 1&lt;/td&gt;
+      &lt;td&gt;Satır 1, Kolon 2&lt;/td&gt;
+      &lt;td colspan="2"&gt;Satır 1, Kolon 3 ve 4 birleşti&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td colspan="2"&gt;Satır 2, Kolon 2 ve 3 birleşti&lt;/td&gt;
+      &lt;td&gt;Satır 2, Kolon 4&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Satır 3, Kolon 1&lt;/td&gt;
+      &lt;td&gt;Satır 3, Kolon 2&lt;/td&gt;
+      &lt;td&gt;Satır 3, Kolon 3&lt;/td&gt;
+      &lt;td&gt;Satır 3, Kolon 4&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7.2 Detaylı Tablo: <colgroup> ile Kolon Stilizasyonu -->
+        <section id="detailed-tables-colgroup">
+            <h2>Detaylı Tablo: &lt;colgroup&gt; ile Kolon Stilizasyonu</h2>
+            <p>Bu örnekte, <code>&lt;colgroup&gt;</code> ve <code>&lt;col&gt;</code> etiketleri kullanılarak tablodaki
+                kolonlara toplu stil uygulanmıştır.</p>
+            <div class="demo-code">
+                <div class="demo">
+                    <table>
+                        <caption>&lt;colgroup&gt; Kullanımı</caption>
+                        <colgroup>
+                            <col style="background-color: #f2f2f2;">
+                            <col style="background-color: #ffffff;">
+                            <col style="background-color: #f2f2f2;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>İsim</th>
+                                <th>Yaş</th>
+                                <th>Şehir</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Ayşe</td>
+                                <td>28</td>
+                                <td>İstanbul</td>
+                            </tr>
+                            <tr>
+                                <td>Mehmet</td>
+                                <td>34</td>
+                                <td>Ankara</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="code">
+                    <pre><code>&lt;table&gt;
+  &lt;caption&gt;&lt;colgroup&gt; Kullanımı&lt;/caption&gt;
+  &lt;colgroup&gt;
+    &lt;col style="background-color: #f2f2f2;"&gt;
+    &lt;col style="background-color: #ffffff;"&gt;
+    &lt;col style="background-color: #f2f2f2;"&gt;
+  &lt;/colgroup&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;İsim&lt;/th&gt;
+      &lt;th&gt;Yaş&lt;/th&gt;
+      &lt;th&gt;Şehir&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Ayşe&lt;/td&gt;
+      &lt;td&gt;28&lt;/td&gt;
+      &lt;td&gt;İstanbul&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Mehmet&lt;/td&gt;
+      &lt;td&gt;34&lt;/td&gt;
+      &lt;td&gt;Ankara&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Ek HTML Etiketleri -->
+        <section id="additional-tags">
+            <h2>Ek HTML Etiketleri</h2>
+            <p>Aşağıda, temel HTML etiketlerine ek olarak bilmeniz gereken bazı etiketler ve örnek kullanımları yer
+                almaktadır.</p>
+            <div class="demo-code">
+                <div class="demo">
+                    <h3>Navigation (Nav)</h3>
+                    <nav>
+                        <ul>
+                            <li><a href="#presentation-formatting">Biçimlendirme</a></li>
+                            <li><a href="#links-graphics">Bağlantılar ve Grafikler</a></li>
+                            <li><a href="#separators">Ayırıcılar</a></li>
+                            <li><a href="#lists">Listeler</a></li>
+                            <li><a href="#background-colors">Arka Plan &amp; Renkler</a></li>
+                            <li><a href="#forms">Formlar</a></li>
+                            <li><a href="#tables">Tablolar</a></li>
+                            <li><a href="#additional-tags">Ek Etiketler</a></li>
+                        </ul>
+                    </nav>
+                    <h3>Article &amp; Aside</h3>
+                    <article>
+                        <h4>Makale Başlığı</h4>
+                        <p>Bu bir makale örneğidir. Yayın tarihi: <time datetime="2025-02-13">13 Şubat 2025</time></p>
+                    </article>
+                    <aside>
+                        <h4>Yan Bilgi</h4>
+                        <p>Bu kısım, makaleye ek olarak sunulan yan bilgileri içerir.</p>
+                    </aside>
+                    <h3>Video &amp; Audio</h3>
+                    <video width="320" height="240" controls>
+                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                        Tarayıcınız video elementini desteklemiyor.
+                    </video>
+                    <br>
+                    <audio controls>
+                        <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+                        Tarayıcınız audio elementini desteklemiyor.
+                    </audio>
+                    <h3>iFrame</h3>
+                    <iframe src="https://www.example.com" width="300" height="200" title="Örnek iFrame">
+                        Tarayıcınız iframe desteğini desteklemiyor.
+                    </iframe>
+                    <h3>Details &amp; Summary</h3>
+                    <details>
+                        <summary>Detayları Göster</summary>
+                        <p>Burada gizli kalan detaylı bilgiler yer almaktadır.</p>
+                    </details>
+                    <h3>Progress &amp; Meter</h3>
+                    <p>İlerleme: <progress value="70" max="100"></progress></p>
+                    <p>Oran: <meter value="0.6"></meter></p>
+                    <h3>Dialog (Örnek)</h3>
+                    <dialog open>
+                        <p>Bu, açık durumda bir dialog kutusudur.</p>
+                    </dialog>
+                </div>
+                <div class="code">
+                    <pre><code>&lt;!-- Navigation (Nav) --&gt;
+&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="#presentation-formatting"&gt;Biçimlendirme&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#links-graphics"&gt;Bağlantılar ve Grafikler&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#separators"&gt;Ayırıcılar&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#lists"&gt;Listeler&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#background-colors"&gt;Arka Plan &amp; Renkler&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#forms"&gt;Formlar&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#tables"&gt;Tablolar&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#additional-tags"&gt;Ek Etiketler&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;!-- Article &amp; Aside --&gt;
+&lt;article&gt;
+  &lt;h4&gt;Makale Başlığı&lt;/h4&gt;
+  &lt;p&gt;Bu bir makale örneğidir. Yayın tarihi: &lt;time datetime="2025-02-13"&gt;13 Şubat 2025&lt;/time&gt;&lt;/p&gt;
+&lt;/article&gt;
+
+&lt;aside&gt;
+  &lt;h4&gt;Yan Bilgi&lt;/h4&gt;
+  &lt;p&gt;Bu kısım, makaleye ek olarak sunulan yan bilgileri içerir.&lt;/p&gt;
+&lt;/aside&gt;
+
+&lt;!-- Video &amp; Audio --&gt;
+&lt;video width="320" height="240" controls&gt;
+  &lt;source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"&gt;
+  Tarayıcınız video elementini desteklemiyor.
+&lt;/video&gt;
+&lt;br&gt;
+&lt;audio controls&gt;
+  &lt;source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg"&gt;
+  Tarayıcınız audio elementini desteklemiyor.
+&lt;/audio&gt;
+
+&lt;!-- iFrame --&gt;
+&lt;iframe src="https://www.example.com" width="300" height="200" title="Örnek iFrame"&gt;
+  Tarayıcınız iframe desteğini desteklemiyor.
+&lt;/iframe&gt;
+
+&lt;!-- Details &amp; Summary --&gt;
+&lt;details&gt;
+  &lt;summary&gt;Detayları Göster&lt;/summary&gt;
+  &lt;p&gt;Burada gizli kalan detaylı bilgiler yer almaktadır.&lt;/p&gt;
+&lt;/details&gt;
+
+&lt;!-- Progress &amp; Meter --&gt;
+&lt;p&gt;İlerleme: &lt;progress value="70" max="100"&gt;&lt;/progress&gt;&lt;/p&gt;
+&lt;p&gt;Oran: &lt;meter value="0.6"&gt;&lt;/meter&gt;&lt;/p&gt;
+
+&lt;!-- Dialog --&gt;
+&lt;dialog open&gt;
+  &lt;p&gt;Bu, açık durumda bir dialog kutusudur.&lt;/p&gt;
+&lt;/dialog&gt;
+</code></pre>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <p>Detaylı HTML örnek sayfası &copy; 2025</p>
+    </footer>
+</body>
+
+</html>
