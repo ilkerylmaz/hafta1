@@ -66,6 +66,16 @@
                 flex: 1 1 100%;
             }
         }
+
+        #tabledetail {
+            width: 700px;
+            height: 300px;
+        }
+
+        #tablefirst {
+            width: 500px;
+            height: 200px;
+        }
     </style>
 </head>
 
@@ -302,10 +312,11 @@
             <h2>Tables (Tablolar)</h2>
             <p>Aşağıda tablo etiketlerinin (<code>&lt;table&gt;</code>, <code>&lt;thead&gt;</code>,
                 <code>&lt;tbody&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code>, <code>&lt;td&gt;</code>,
-                <code>&lt;caption&gt;</code>) kullanımı gösterilmiştir.</p>
+                <code>&lt;caption&gt;</code>) kullanımı gösterilmiştir.
+            </p>
             <div class="demo-code">
                 <div class="demo">
-                    <table>
+                    <table border="1" id="tablefirst">
                         <caption>Örnek Tablo</caption>
                         <thead>
                             <tr>
@@ -370,7 +381,7 @@
                 gösterilmiştir.</p>
             <div class="demo-code">
                 <div class="demo">
-                    <table>
+                    <table id="tabledetail" border="3">
                         <caption>Colspan ve Rowspan Örneği</caption>
                         <thead>
                             <tr>
@@ -380,14 +391,14 @@
                                 <th>Başlık 4</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody align="center">
                             <tr>
-                                <td rowspan="2">Satır 1-2, Kolon 1</td>
-                                <td>Satır 1, Kolon 2</td>
-                                <td colspan="2">Satır 1, Kolon 3 ve 4 birleşti</td>
+                                <td rowspan="2">kolon 1</td>
+                                <td>Kolon 2</td>
+                                <td colspan="2">kolon 3 ve 4</td>
                             </tr>
                             <tr>
-                                <td colspan="2">Satır 2, Kolon 2 ve 3 birleşti</td>
+                                <td colspan="2" align="center">Satır 2, Kolon 2 ve 3 birleşti</td>
                                 <td>Satır 2, Kolon 4</td>
                             </tr>
                             <tr>
@@ -440,7 +451,7 @@
                 kolonlara toplu stil uygulanmıştır.</p>
             <div class="demo-code">
                 <div class="demo">
-                    <table>
+                    <table border="3">
                         <caption>&lt;colgroup&gt; Kullanımı</caption>
                         <colgroup>
                             <col style="background-color: #f2f2f2;">
